@@ -1,4 +1,6 @@
+using Microsoft.EntityFrameworkCore;
 using Pets;
+using Pets.Entities;
 using Pets.Repositories;
 using Pets.Services;
 
@@ -9,6 +11,7 @@ builder.Services.AddTransient<IOwnerInfoService, OwnerInfoService>();
 builder.Services.AddScoped<IOwnerInfoRepository, OwnerInfoRepository>();
 builder.Services.AddSingleton<DataStore>();
 
+builder.Services.AddDbContext<OwnerInfoContext>(db => db.UseSqlServer(builder.Configuration.GetConnectionString("PetDbConnectionString")), ServiceLifetime.Scoped);
 
 
 builder.Services.AddControllers();

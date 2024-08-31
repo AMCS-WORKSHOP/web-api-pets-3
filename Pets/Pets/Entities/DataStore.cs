@@ -1,4 +1,4 @@
-﻿namespace Pets
+﻿namespace Pets.Entities
 {
     public class DataStore
     {

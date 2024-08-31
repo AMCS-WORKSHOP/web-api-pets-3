@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pets", "Pets\Pets.csproj", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D227F0D7-053C-4E15-8AD3-8437D478E0C2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetsTests", "PetsTests\PetsTests.csproj", "{6C7FCBAA-F60C-4E31-86AD-12ABC2B7A937}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,6 +19,10 @@ Global
 		{C5D91337-2A2C-4D6C-80A4-00EFA76557E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5D91337-2A2C-4D6C-80A4-00EFA76557E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C5D91337-2A2C-4D6C-80A4-00EFA76557E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C7FCBAA-F60C-4E31-86AD-12ABC2B7A937}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C7FCBAA-F60C-4E31-86AD-12ABC2B7A937}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C7FCBAA-F60C-4E31-86AD-12ABC2B7A937}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C7FCBAA-F60C-4E31-86AD-12ABC2B7A937}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,4 +1,6 @@
 ﻿
+using Pets.Entities;
+
 namespace Pets.Repositories
 {
     public interface IOwnerInfoRepository

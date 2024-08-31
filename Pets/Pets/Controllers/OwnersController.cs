@@ -9,13 +9,10 @@ namespace Pets.Controllers
     public class OwnersController : ControllerBase
     {
         private readonly IOwnerInfoService _ownerInfoService;
-        private readonly DataStore _dataStore; // TODO: REFACTOR THIS UGLY REFENCE
 
-        // TODO: REFACTOR THIS UGLY CONTRUCTOR
-        public OwnersController(IOwnerInfoService ownerInfoService, DataStore dataStore)
+        public OwnersController(IOwnerInfoService ownerInfoService)
         {
             _ownerInfoService = ownerInfoService;
-            _dataStore = dataStore;
         }
 
         [HttpGet]
@@ -45,21 +42,15 @@ namespace Pets.Controllers
         }
 
 
-
-        // TODO: REFACTOR THIS UGLY ACTION METHOD
         [HttpGet("pets/{petId}", Name = "GetPetByOwner")]
         public ActionResult GetPetByOwner(int ownerId, int petId)
         {
-            var owner = _dataStore.Owners.SingleOrDefault(o => o.Id == ownerId);
+            var owner = _ownerInfoService.GetOwnerWithPets(ownerId);
 
             if (owner == null)
             {
                 return NotFound($"Owner with id of {ownerId} does not exist.");
             }
-
-            owner.Pets = _dataStore.Pets
-                .FindAll(p => p.OwnerId == owner.Id)
-                .ToList();
 
             var pet = owner.Pets.SingleOrDefault(p => p.Id == petId);
 
